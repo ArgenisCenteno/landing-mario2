@@ -46,12 +46,12 @@
     .hero-grid{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);gap:2px;}
     .hero-cell{overflow:hidden;position:relative;}
     .hero-cell-img{width:100%;height:100%;background-size:cover;background-position:center;transform:scale(1.08);animation:zoomCell 14s ease-in-out infinite alternate;filter:brightness(.4) saturate(.5);}
-    .hero-cell:nth-child(1) .hero-cell-img{animation-delay:0s;background-image:url('https://www.mariopeluqueros.com/wp-content/themes/rt_versla/custom/images/rocketlauncher/historia/10365938_1575152406110014_3525117233058249797_n.jpg');}
-    .hero-cell:nth-child(2) .hero-cell-img{animation-delay:2.5s;background-image:url('https://www.mariopeluqueros.com/wp-content/themes/rt_versla/custom/images/rocketlauncher/historia/12039241_1526009321024323_1708677985751966109_n.jpg');}
-    .hero-cell:nth-child(3) .hero-cell-img{animation-delay:1s;background-image:url('https://www.mariopeluqueros.com/wp-content/themes/rt_versla/custom/images/rocketlauncher/historia/12002923_1523959577895964_6116538188313312650_n.jpg');}
-    .hero-cell:nth-child(4) .hero-cell-img{animation-delay:3.5s;background-image:url('https://www.mariopeluqueros.com/wp-content/themes/rt_versla/custom/images/rocketlauncher/historia2/52.jpg');}
-    .hero-cell:nth-child(5) .hero-cell-img{animation-delay:1.5s;background-image:url('https://www.mariopeluqueros.com/wp-content/themes/rt_versla/custom/images/rocketlauncher/historia2/54.jpg');}
-    .hero-cell:nth-child(6) .hero-cell-img{animation-delay:.5s;background-image:url('https://www.mariopeluqueros.com/wp-content/themes/rt_versla/custom/images/rocketlauncher/historia2/26.jpg');}
+    .hero-cell:nth-child(1) .hero-cell-img{animation-delay:0s;background-image:url('img/hero1.jpg');}
+    .hero-cell:nth-child(2) .hero-cell-img{animation-delay:2.5s;background-image:url('img/hero2.jpg');}
+    .hero-cell:nth-child(3) .hero-cell-img{animation-delay:1s;background-image:url('img/hero3.jpg');}
+    .hero-cell:nth-child(4) .hero-cell-img{animation-delay:3.5s;background-image:url('img/hero4.jpg');}
+    .hero-cell:nth-child(5) .hero-cell-img{animation-delay:1.5s;background-image:url('img/hero5.jpg');}
+    .hero-cell:nth-child(6) .hero-cell-img{animation-delay:.5s;background-image:url('img/hero6.jpg');}
     @keyframes zoomCell{0%{transform:scale(1.08);}100%{transform:scale(1.5);}}
     .hero-veil{position:absolute;inset:0;background:rgba(16,12,8,.58);z-index:1;}
     .hero-vignette{position:absolute;inset:0;z-index:2;background:radial-gradient(ellipse 80% 80% at 50% 50%,transparent 35%,rgba(10,8,5,.72) 100%);}
@@ -373,13 +373,19 @@
       <p class="bp rv" style="max-width:380px">Profesionales apasionados, formados en las mejores escuelas. Cada uno con su sello, todos comprometidos con la excelencia.</p>
     </div>
     <div class="team-grid rv">
-      <div class="team-card"><div class="team-img" style="background-image:url('https://www.mariopeluqueros.com/wp-content/themes/rt_versla/custom/images/Equipo_Mario.jpg')"></div><div class="team-over"></div><div class="team-info"><h3 class="team-nm">Francisco Mario Gómez</h3><p class="team-rl">Estilista y Jefe de Equipos</p></div></div>
-      <div class="team-card"><div class="team-img" style="background-image:url('https://www.mariopeluqueros.com/wp-content/themes/rt_versla/custom/images/Equipo_Carmen.jpg')"></div><div class="team-over"></div><div class="team-info"><h3 class="team-nm">Carmen Buizá</h3><p class="team-rl">Manager de la Empresa</p></div></div>
-      <div class="team-card"><div class="team-img" style="background-image:url('https://www.mariopeluqueros.com/wp-content/themes/rt_versla/custom/images/Equipo_Maria.jpg')"></div><div class="team-over"></div><div class="team-info"><h3 class="team-nm">María Huertas</h3><p class="team-rl">Estilista y Consejera del Salón</p></div></div>
-      <div class="team-card"><div class="team-img" style="background-image:url('https://www.mariopeluqueros.com/wp-content/themes/rt_versla/custom/images/Equipo_Valentin.jpg')"></div><div class="team-over"></div><div class="team-info"><h3 class="team-nm">Valentín Gómez</h3><p class="team-rl">Estilista Jefe</p></div></div>
-      <div class="team-card"><div class="team-img" style="background-image:url('https://www.mariopeluqueros.com/wp-content/themes/rt_versla/custom/images/Equipo_Aida.jpg')"></div><div class="team-over"></div><div class="team-info"><h3 class="team-nm">Aida Gómez</h3><p class="team-rl">Jefe del Centro de Estética</p></div></div>
-      <div class="team-card"><div class="team-img" style="background-image:url('https://www.mariopeluqueros.com/wp-content/themes/rt_versla/custom/images/Equipo_Sandra.jpg')"></div><div class="team-over"></div><div class="team-info"><h3 class="team-nm">Sandra Roch</h3><p class="team-rl">Técnica en Color y Consejera en Tratamientos</p></div></div>
-      <div class="team-card"><div class="team-img" style="background-image:url('https://www.mariopeluqueros.com/wp-content/themes/rt_versla/custom/images/Equipo_Maribel.jpg')"></div><div class="team-over"></div><div class="team-info"><h3 class="team-nm">Maribel Baños</h3><p class="team-rl">Estilista y Consejera en Cambios de Imagen</p></div></div>
+      <div class="team-card"><div class="team-img" style="background-image:url('img/mario.jpg')"></div><div class="team-over"></div><div class="team-info"><h3 class="team-nm">Francisco Mario Gómez</h3><p class="team-rl">Estilista y Jefe de Equipos</p></div></div>
+
+<div class="team-card"><div class="team-img" style="background-image:url('img/carmen.jpg')"></div><div class="team-over"></div><div class="team-info"><h3 class="team-nm">Carmen Buizá</h3><p class="team-rl">Manager de la Empresa</p></div></div>
+
+<div class="team-card"><div class="team-img" style="background-image:url('img/maria.jpg')"></div><div class="team-over"></div><div class="team-info"><h3 class="team-nm">María Huertas</h3><p class="team-rl">Estilista y Consejera del Salón</p></div></div>
+
+<div class="team-card"><div class="team-img" style="background-image:url('img/valentin.jpg')"></div><div class="team-over"></div><div class="team-info"><h3 class="team-nm">Valentín Gómez</h3><p class="team-rl">Estilista Jefe</p></div></div>
+
+<div class="team-card"><div class="team-img" style="background-image:url('img/aida.jpg')"></div><div class="team-over"></div><div class="team-info"><h3 class="team-nm">Aida Gómez</h3><p class="team-rl">Jefe del Centro de Estética</p></div></div>
+
+<div class="team-card"><div class="team-img" style="background-image:url('img/sandra.jpg')"></div><div class="team-over"></div><div class="team-info"><h3 class="team-nm">Sandra Roch</h3><p class="team-rl">Técnica en Color y Consejera en Tratamientos</p></div></div>
+
+<div class="team-card"><div class="team-img" style="background-image:url('img/maribel.jpg')"></div><div class="team-over"></div><div class="team-info"><h3 class="team-nm">Maribel Baños</h3><p class="team-rl">Estilista y Consejera en Cambios de Imagen</p></div></div>
     </div>
   </div>
 </section>
@@ -392,7 +398,7 @@
       <a href="#reserva" style="font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;font-weight:300;color:var(--sand);text-decoration:none;display:flex;align-items:center;gap:.5rem;" class="rv">Ver todo <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
     <div class="gal-grid rv">
-      <div class="gi"><div class="gi-img" style="background-image:url('https://www.mariopeluqueros.com/wp-content/themes/rt_versla/custom/images/rocketlauncher/historia/12002923_1523959577895964_6116538188313312650_n.jpg')"></div><div class="gi-over"><span class="gi-lbl">Explorar</span></div></div>
+      <div class="gi"><div class="gi-img" style="background-image:url('img/hero4.jpg')"></div><div class="gi-over"><span class="gi-lbl">Explorar</span></div></div>
       <div class="gi"><div class="gi-img" style="background-image:url('https://landing-mario-three.vercel.app/images/service3.jpg')"></div><div class="gi-over"><span class="gi-lbl">Explorar</span></div></div>
       <div class="gi"><div class="gi-img" style="background-image:url('https://landing-mario-three.vercel.app/images/service6.jpg')"></div><div class="gi-over"><span class="gi-lbl">Explorar</span></div></div>
       <div class="gi"><div class="gi-img" style="background-image:url('https://landing-mario-three.vercel.app/images/service2.jpg')"></div><div class="gi-over"><span class="gi-lbl">Explorar</span></div></div>
