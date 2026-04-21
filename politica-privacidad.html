@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Política de Privacidad — CM Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400;500&family=Cormorant:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
+  <style>
+ :root{
+      --oat:#f2ede6; --linen:#e8e1d8; --sand:#d6ccbf; --topo:#8c8070;
+      --espresso:#0f1f3d; --carbon:#0f1f3d; --warm-mid:#3d5278; --accent:#1a3560;
+      --white:#faf8f5;
+    }    *{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--oat);color:var(--espresso);font-family:'Jost',sans-serif;font-weight:300;overflow-x:hidden;}
+    ::-webkit-scrollbar{width:2px;}::-webkit-scrollbar-track{background:var(--linen);}::-webkit-scrollbar-thumb{background:var(--topo);}
+
+    /* NAV */
+   nav{
+      position:fixed;top:0;left:0;right:0;z-index:200;
+      padding:1rem 3rem;
+      background:rgba(15,31,61,.95);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(214,204,191,.08);
+      display:flex;align-items:center;justify-content:space-between;
+    }
+     .nav-logo{
+      font-family:'Cormorant',serif;font-size:1.25rem;font-weight:300;
+      letter-spacing:.3em;text-transform:uppercase;
+      color:var(--oat);text-decoration:none;
+    }
+    .nav-back{
+      font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;font-weight:400;
+      color:rgba(242,237,230,.45);text-decoration:none;
+      display:flex;align-items:center;gap:.55rem;
+      transition:color .3s;
+    }
+    .nav-back:hover{color:var(--oat);}
+    .nav-back svg{transition:transform .3s;}
+    .nav-back:hover svg{transform:translateX(-3px);}
+    @media(max-width:768px){nav{padding:.9rem 1.5rem;}}
+
+    /* HERO */
+    .legal-hero{padding:13rem 0 5rem;background:var(--carbon);position:relative;overflow:hidden;}
+    .lh-grid{position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,transparent,transparent 79px,rgba(214,204,191,.04) 79px,rgba(214,204,191,.04) 80px);pointer-events:none;}
+    .lh-inner{max-width:900px;margin:0 auto;padding:0 3rem;position:relative;z-index:1;}
+    .lh-tag{font-size:.58rem;letter-spacing:.45em;text-transform:uppercase;color:var(--sand);font-weight:400;margin-bottom:1.75rem;display:flex;align-items:center;gap:1rem;}
+    .lh-tag::before{content:'';display:block;width:24px;height:1px;background:rgba(214,204,191,.3);}
+    .lh-title{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,6vw,5.5rem);font-weight:300;color:var(--oat);line-height:1.02;margin-bottom:1.5rem;}
+    .lh-title em{font-style:italic;color:var(--sand);}
+    .lh-meta{font-size:.7rem;letter-spacing:.15em;color:rgba(242,237,230,.22);font-weight:300;}
+    .lh-meta span{margin:0 .6rem;opacity:.5;}
+    @media(max-width:768px){.lh-inner{padding:0 1.5rem;}}
+
+    /* BODY */
+    .legal-wrap{max-width:900px;margin:0 auto;padding:5rem 3rem 7rem;}
+    @media(max-width:768px){.legal-wrap{padding:3.5rem 1.5rem 5rem;}}
+
+    /* TOC */
+    .toc{background:var(--white);border:1px solid var(--sand);padding:2.5rem;margin-bottom:4.5rem;}
+    .toc-label{font-size:.58rem;letter-spacing:.4em;text-transform:uppercase;color:var(--topo);font-weight:400;margin-bottom:1.5rem;}
+    .toc-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.65rem 4rem;}
+    .toc-list li{display:flex;align-items:baseline;gap:.7rem;}
+    .toc-n{font-family:'Cormorant',serif;font-size:.95rem;color:var(--sand);font-weight:300;flex-shrink:0;min-width:1.6rem;}
+    .toc-list a{font-size:.82rem;color:var(--warm-mid);text-decoration:none;transition:color .25s;font-weight:300;}
+    .toc-list a:hover{color:var(--espresso);}
+    @media(max-width:580px){.toc-list{grid-template-columns:1fr;}}
+
+    /* SECCIONES */
+    .ls{margin-bottom:3.75rem;}
+    .ls-eyebrow{font-family:'Cormorant',serif;font-size:.85rem;font-weight:300;color:var(--sand);letter-spacing:.12em;margin-bottom:.4rem;}
+    .ls-title{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:300;color:var(--espresso);margin-bottom:1.5rem;padding-bottom:.85rem;border-bottom:1px solid var(--linen);}
+    .ls p{font-size:.9rem;line-height:1.88;color:var(--warm-mid);font-weight:300;margin-bottom:1rem;}
+    .ls p:last-child{margin-bottom:0;}
+    .ls a{color:var(--espresso);text-decoration:none;border-bottom:1px solid var(--sand);padding-bottom:1px;transition:border-color .25s;}
+    .ls a:hover{border-color:var(--espresso);}
+    .ls ul{padding-left:1.1rem;margin:.75rem 0;}
+    .ls ul li{font-size:.9rem;line-height:1.85;color:var(--warm-mid);font-weight:300;margin-bottom:.45rem;list-style:disc;}
+
+    /* TABLA */
+    .tbl-wrap{overflow-x:auto;margin:1.5rem 0;}
+    .tbl{width:100%;border-collapse:collapse;font-size:.82rem;}
+    .tbl thead tr{background:var(--espresso);}
+    .tbl th{padding:.9rem 1rem;text-align:left;font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sand);font-weight:400;white-space:nowrap;}
+    .tbl td{padding:.85rem 1rem;border-bottom:1px solid var(--linen);color:var(--warm-mid);font-weight:300;vertical-align:top;line-height:1.55;}
+    .tbl tr:last-child td{border-bottom:none;}
+    .tbl tr:hover td{background:var(--white);}
+
+    /* HBOX */
+    .hbox{background:var(--linen);border-left:2px solid var(--sand);padding:1.5rem 1.75rem;margin:1.5rem 0;}
+    .hbox p{font-size:.88rem;line-height:1.8;color:var(--warm-mid);font-weight:300;margin:0;}
+
+    /* DERECHOS */
+    .rg{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--sand);margin:1.5rem 0;}
+    .rc{background:var(--white);padding:1.5rem 1.25rem;}
+    .rc-ico{font-size:1rem;margin-bottom:.65rem;}
+    .rc-name{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--espresso);font-weight:400;margin-bottom:.45rem;}
+    .rc-desc{font-size:.78rem;line-height:1.6;color:var(--topo);font-weight:300;}
+    @media(max-width:580px){.rg{grid-template-columns:1fr 1fr;}}
+
+    /* FOOTER — idéntico al index */
+    footer{padding:3.5rem 0 2rem;background:#0e0c09;border-top:1px solid rgba(214,204,191,.06);}
+    .ft-logo{font-family:'Cormorant',serif;font-size:2rem;font-weight:300;letter-spacing:.2em;color:var(--oat);}
+    .ft-tag{font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(242,237,230,.22);margin-top:.4rem;font-weight:300;}
+    .ft-links a{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(242,237,230,.28);text-decoration:none;transition:color .3s;font-weight:300;}
+    .ft-links a:hover{color:var(--sand);}
+    .ft-bot{margin-top:3rem;padding-top:1.75rem;border-top:1px solid rgba(214,204,191,.05);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+    .ft-copy{font-size:.62rem;letter-spacing:.1em;color:rgba(242,237,230,.16);font-weight:300;}
+    .ft-copy a{color:rgba(242,237,230,.22);text-decoration:none;transition:color .3s;}
+    .ft-copy a:hover{color:var(--sand);}
+    .soc-links{display:flex;gap:.75rem;}
+    .soc-a{width:38px;height:38px;border:1px solid rgba(214,204,191,.2);display:flex;align-items:center;justify-content:center;font-size:.65rem;color:rgba(242,237,230,.45);text-decoration:none;transition:all .3s;letter-spacing:.05em;}
+    .soc-a:hover{border-color:var(--sand);color:var(--sand);}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-back"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Volver</a>
+  <a href="index.html" class="nav-logo">CM Studio</a>
+</nav>
+
+<header class="legal-hero">
+  <div class="lh-grid" aria-hidden="true"></div>
+  <div class="lh-inner">
+    <p class="lh-tag">Legal</p>
+    <h1 class="lh-title">Política de<br/><em>Privacidad</em></h1>
+    <p class="lh-meta">Última actualización: enero 2026 <span>·</span> Versión 1.0</p>
+  </div>
+</header>
+
+<main class="legal-wrap">
+
+  
+
+  <section class="ls" id="p1">
+    <p class="ls-eyebrow">01</p>
+    <h2 class="ls-title">Responsable del tratamiento</h2>
+    <p>En cumplimiento del Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 de Protección de Datos (LOPDGDD), te informamos de que tus datos serán tratados por:</p>
+    <div class="hbox"><p><strong>Denominación:</strong> CM Studio<br/><strong>CIF:</strong> B-XXXXXXXX<br/><strong>Dirección:</strong> Calle Gran Vía, 45 — 28013 Barcelona, España<br/><strong>Email:</strong> <a href="mailto:hola@mariopeluqueros.es">hola@mariopeluqueros.es</a><br/><strong>Teléfono:</strong> +34 91 234 56 78</p></div>
+  </section>
+
+  <section class="ls" id="p2">
+    <p class="ls-eyebrow">02</p>
+    <h2 class="ls-title">Datos que recogemos</h2>
+    <p>Recogemos los datos personales que nos proporcionas directamente y los que se generan automáticamente al navegar por nuestra web:</p>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>Categoría</th><th>Datos</th><th>Origen</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Identificación</strong></td><td>Nombre y apellidos</td><td>Formulario de reserva / contacto</td></tr>
+          <tr><td><strong>Contacto</strong></td><td>Teléfono, dirección de email</td><td>Formulario de reserva / contacto</td></tr>
+          <tr><td><strong>Reservas</strong></td><td>Servicio, estilista, fecha, hora, notas</td><td>Formulario de reserva online</td></tr>
+          <tr><td><strong>Navegación</strong></td><td>IP, dispositivo, páginas visitadas, duración de sesión</td><td>Cookies analíticas (con consentimiento)</td></tr>
+          <tr><td><strong>Marketing</strong></td><td>Comportamiento en redes, interacciones con anuncios</td><td>Cookies de marketing (con consentimiento)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>No tratamos categorías especiales de datos (salud, origen racial, creencias, etc.) ni datos de menores de 14 años.</p>
+  </section>
+
+  <section class="ls" id="p3">
+    <p class="ls-eyebrow">03</p>
+    <h2 class="ls-title">Finalidades y base legal</h2>
+    <ul>
+      <li><strong>Gestión de reservas y prestación del servicio.</strong> Base legal: ejecución de contrato (art. 6.1.b RGPD).</li>
+      <li><strong>Comunicación sobre tu cita</strong> (confirmación, recordatorios). Base legal: ejecución de contrato e interés legítimo.</li>
+      <li><strong>Atención al cliente</strong> y resolución de consultas. Base legal: interés legítimo (art. 6.1.f RGPD).</li>
+      <li><strong>Análisis estadístico</strong> del uso de la web. Base legal: consentimiento (art. 6.1.a RGPD), revocable en cualquier momento.</li>
+      <li><strong>Envío de comunicaciones comerciales.</strong> Base legal: consentimiento explícito. Puedes darte de baja cuando quieras.</li>
+      <li><strong>Cumplimiento de obligaciones legales</strong> (fiscales, contables). Base legal: obligación legal (art. 6.1.c RGPD).</li>
+    </ul>
+  </section>
+
+  <section class="ls" id="p4">
+    <p class="ls-eyebrow">04</p>
+    <h2 class="ls-title">Conservación de los datos</h2>
+    <ul>
+      <li><strong>Datos de reserva y cliente:</strong> mientras dure la relación comercial y 5 años adicionales para obligaciones fiscales.</li>
+      <li><strong>Comunicaciones de marketing:</strong> hasta que retires tu consentimiento o solicites la supresión.</li>
+      <li><strong>Datos de navegación analíticos:</strong> 26 meses (plazo estándar de Google Analytics).</li>
+      <li><strong>Consultas y reclamaciones:</strong> 3 años desde la resolución.</li>
+    </ul>
+    <p>Transcurridos estos plazos, tus datos serán eliminados de forma segura o anonimizados.</p>
+  </section>
+
+  <section class="ls" id="p5">
+    <p class="ls-eyebrow">05</p>
+    <h2 class="ls-title">Destinatarios y transferencias</h2>
+    <p>No cedemos ni vendemos tus datos a terceros, salvo en los supuestos siguientes:</p>
+    <ul>
+      <li><strong>Proveedores de servicios técnicos</strong> (hosting, reservas, email marketing) que actúan como encargados del tratamiento bajo contrato.</li>
+      <li><strong>Google LLC</strong> (Google Analytics). Transferencias a EE.UU. amparadas en Cláusulas Contractuales Tipo de la Comisión Europea.</li>
+      <li><strong>Meta Platforms, Inc.</strong> y <strong>TikTok Technology Limited,</strong> únicamente si has aceptado cookies de marketing.</li>
+      <li><strong>Administraciones públicas</strong> y autoridades competentes cuando la ley lo exija.</li>
+    </ul>
+  </section>
+
+  <section class="ls" id="p6">
+    <p class="ls-eyebrow">06</p>
+    <h2 class="ls-title">Tus derechos</h2>
+    <p>Como interesado puedes ejercer en cualquier momento los siguientes derechos:</p>
+    <div class="rg">
+      <div class="rc"><div class="rc-ico">👁</div><p class="rc-name">Acceso</p><p class="rc-desc">Conocer qué datos tratamos y cómo los usamos.</p></div>
+      <div class="rc"><div class="rc-ico">✏️</div><p class="rc-name">Rectificación</p><p class="rc-desc">Corregir datos incorrectos o incompletos.</p></div>
+      <div class="rc"><div class="rc-ico">🗑</div><p class="rc-name">Supresión</p><p class="rc-desc">Solicitar la eliminación cuando ya no sean necesarios.</p></div>
+      <div class="rc"><div class="rc-ico">⏸</div><p class="rc-name">Limitación</p><p class="rc-desc">Restringir el tratamiento en determinadas circunstancias.</p></div>
+      <div class="rc"><div class="rc-ico">📦</div><p class="rc-name">Portabilidad</p><p class="rc-desc">Recibir tus datos en formato estructurado.</p></div>
+      <div class="rc"><div class="rc-ico">🚫</div><p class="rc-name">Oposición</p><p class="rc-desc">Oponerte al tratamiento basado en interés legítimo.</p></div>
+    </div>
+    <p>Envía un email a <a href="mailto:hola@mariopeluqueros.es">hola@mariopeluqueros.es</a> indicando el derecho que deseas ejercer y adjuntando copia de tu DNI. Responderemos en un máximo de 30 días.</p>
+  </section>
+
+  <section class="ls" id="p7">
+    <p class="ls-eyebrow">07</p>
+    <h2 class="ls-title">Seguridad</h2>
+    <ul>
+      <li>Cifrado SSL/TLS en todas las comunicaciones entre tu navegador y nuestros servidores.</li>
+      <li>Acceso restringido únicamente al personal autorizado, bajo deber de confidencialidad.</li>
+      <li>Copias de seguridad periódicas en servidores con certificación de seguridad.</li>
+      <li>Revisión periódica de nuestras medidas conforme a la normativa vigente.</li>
+    </ul>
+    <p>En caso de brecha de seguridad que afecte a tus derechos, te notificaremos sin dilación conforme al artículo 34 del RGPD.</p>
+  </section>
+
+  <section class="ls" id="p8">
+    <p class="ls-eyebrow">08</p>
+    <h2 class="ls-title">Menores de edad</h2>
+    <p>Nuestros servicios no están dirigidos a menores de 14 años. No recogemos conscientemente datos de menores sin el consentimiento verificable de sus padres o tutores legales. Si eres padre, madre o tutor y crees que tu hijo/a nos ha facilitado datos, contacta con nosotros en <a href="mailto:hola@mariopeluqueros.es">hola@mariopeluqueros.es</a> y procederemos a su eliminación inmediata.</p>
+  </section>
+
+  <section class="ls" id="p9">
+    <p class="ls-eyebrow">09</p>
+    <h2 class="ls-title">Cambios en esta política</h2>
+    <p>Podemos actualizar esta Política de Privacidad para adaptarla a cambios normativos o en nuestros servicios. Cuando los cambios sean relevantes, lo comunicaremos mediante un aviso en nuestra web. La fecha de la última actualización figura siempre en la cabecera del documento.</p>
+  </section>
+
+  <section class="ls" id="p10">
+    <p class="ls-eyebrow">10</p>
+    <h2 class="ls-title">Contacto y reclamaciones</h2>
+    <div class="hbox"><p><strong>CM Studio</strong> — Responsable de Protección de Datos<br/>Calle Gran Vía, 45 — 28013 Barcelona, España<br/>Email: <a href="mailto:hola@mariopeluqueros.es">hola@mariopeluqueros.es</a> · Tel: +34 91 234 56 78</p></div>
+    <p>Si consideras que el tratamiento de tus datos no se ajusta a la normativa, puedes reclamar ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong> — C/ Jorge Juan, 6, 28001 Madrid — <a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a></p>
+  </section>
+
+</main>
+
+<!-- FOOTER IDÉNTICO AL INDEX -->
+<footer>
+  <div class="max-w-7xl mx-auto px-6 lg:px-16">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+      <div class="md:col-span-2">
+        <div class="ft-logo">CM Studio</div>
+        <p class="ft-tag">Arte en cada corte desde 1975</p>
+        <p style="font-size:.82rem;line-height:1.75;color:rgba(242,237,230,.26);margin-top:1.5rem;max-width:300px;font-weight:300">Un espacio donde la tradición barbera se encuentra con el estilo contemporáneo. Tu imagen, nuestra pasión.</p>
+      </div>
+      <div><p style="font-size:.6rem;letter-spacing:.32em;text-transform:uppercase;color:var(--sand);margin-bottom:1.25rem;font-weight:300">Navegación</p><div class="ft-links flex flex-col gap-3"><a href="index.html#about">Nosotros</a><a href="index.html#services">Servicios</a><a href="index.html#equipo">Equipo</a><a href="index.html#galeria">Galería</a><a href="index.html#reserva">Reservar Cita</a></div></div>
+      <div><p style="font-size:.6rem;letter-spacing:.32em;text-transform:uppercase;color:var(--sand);margin-bottom:1.25rem;font-weight:300">Contacto</p><div style="display:flex;flex-direction:column;gap:.75rem"><p style="font-size:.75rem;color:rgba(242,237,230,.25);font-weight:300">+34 91 234 56 78</p><p style="font-size:.75rem;color:rgba(242,237,230,.25);font-weight:300">hola@mariopeluqueros.es</p><p style="font-size:.75rem;color:rgba(242,237,230,.25);font-weight:300;line-height:1.65">Calle Gran Vía, 45<br/>28013 Barcelona</p></div></div>
+    </div>
+    <div class="ft-bot">
+      <p class="ft-copy">© 2025 CM Studio. Todos los derechos reservados. &nbsp;·&nbsp; <a href="politica-privacidad.html">Privacidad</a> &nbsp;·&nbsp; <a href="politica-cookies.html">Cookies</a></p>
+      <div class="soc-links"><a href="#" class="soc-a">Ig</a><a href="#" class="soc-a">Fb</a><a href="#" class="soc-a">Tk</a></div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
