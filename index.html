@@ -322,7 +322,7 @@ footer{padding:3.5rem 0 2rem;background:#08122a;border-top:1px solid rgba(214,20
 
 <!-- NAV -->
 <nav id="nav" class="dark-nav">
-  <a href="#hero" class="nav-logo">CM STUDIO</a>
+  <a href="#hero" class="nav-logo"> <img src="img/logo.png" width="130px" alt="hola"></a>
   <ul class="nav-links">
     <li><a href="#about">Nosotros</a></li>
     <li><a href="#services">Servicios</a></li>
@@ -446,13 +446,7 @@ footer{padding:3.5rem 0 2rem;background:#08122a;border-top:1px solid rgba(214,20
 </section>
 
 <!-- QUOTE -->
-<div class="qband">
-  <div class="qlines" aria-hidden="true"></div>
-  <div class="max-w-7xl mx-auto px-6 lg:px-16">
-    <blockquote class="qtxt rv">"El cabello es la <em>corona</em> que nunca te quitas.<br/>Nosotros nos aseguramos de que siempre brille."</blockquote>
-    <p class="qby rv d1">— Mario García, Fundador</p>
-  </div>
-</div>
+
 <!-- PREMIOS -->
 <section id="premios" style="padding:7rem 0;background:var(--carbon);">
   <div class="max-w-7xl mx-auto px-6 lg:px-16">
@@ -460,6 +454,7 @@ footer{padding:3.5rem 0 2rem;background:#08122a;border-top:1px solid rgba(214,20
       <p class="stag rv">Reconocimientos</p>
       <h2 class="sh rv d1 text-white">Una trayectoria<br/>de <em>excelencia</em></h2>
     </div>
+   
     <div class="rv" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(214,204,191,.08);">
 
       <div class="aw-card" style="background:var(--carbon);padding:2.25rem 2rem;position:relative;overflow:hidden;transition:background .35s;">
@@ -677,8 +672,8 @@ footer{padding:3.5rem 0 2rem;background:#08122a;border-top:1px solid rgba(214,20
   <div class="max-w-7xl mx-auto px-6 lg:px-16">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
       <div class="md:col-span-2">
-        <div class="ft-logo">CM STUDIO</div>
-        <p class="ft-tag">Hair & Skin</p>
+        <div class="ft-logo"><img src="img/logo.png" width="180px" alt="hola"></div>
+        
         <p style="font-size:.82rem;line-height:1.75;color:rgba(242,237,230,.26);margin-top:1.5rem;max-width:300px;font-weight:300">Un espacio donde la tradición barbera se encuentra con el estilo contemporáneo. Tu imagen, nuestra pasión.</p>
       </div>
       <div><p style="font-size:.6rem;letter-spacing:.32em;text-transform:uppercase;color:var(--sand);margin-bottom:1.25rem;font-weight:300">Navegación</p><div class="ft-links flex flex-col gap-3"><a href="#about">Nosotros</a><a href="#services">Servicios</a><a href="#equipo">Equipo</a><a href="#galeria">Galería</a><a href="#reserva">Reservar Cita</a></div></div>
@@ -711,7 +706,7 @@ footer{padding:3.5rem 0 2rem;background:#08122a;border-top:1px solid rgba(214,20
     const s=window.scrollY;
     if(s>60)nav.classList.add('scrolled');else nav.classList.remove('scrolled');
     const hh=document.getElementById('hero').offsetHeight;
-    if(s>hh*.6)nav.classList.remove('dark-nav');else nav.classList.add('dark-nav');
+    
   });
 
   const rvEls=document.querySelectorAll('.rv');
