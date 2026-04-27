@@ -18,8 +18,10 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{background:var(--oat);color:var(--espresso);font-family:'Jost',sans-serif;font-weight:300;overflow-x:hidden;cursor:none;}
-#cur{position:fixed;width:8px;height:8px;background:var(--espresso);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .25s,height .25s;}
-#cur-r{position:fixed;width:36px;height:36px;border:1px solid rgba(15,31,61,.35);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s;}
+#cur{position:fixed;width:8px;height:8px;background:var(--espresso);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .25s,height .25s,background .3s;}
+#cur-r{position:fixed;width:36px;height:36px;border:1px solid rgba(15,31,61,.35);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s,border-color .3s;}
+body.cur-light #cur{background:var(--white);}
+body.cur-light #cur-r{border-color:rgba(250,248,245,.45);}
 ::-webkit-scrollbar{width:2px;}::-webkit-scrollbar-track{background:var(--linen);}::-webkit-scrollbar-thumb{background:var(--topo);}
 
 /* NAV */
@@ -190,11 +192,6 @@ nav.scrolled:not(.dark-nav) .hamburger span{background:var(--espresso);}
 .ci:first-child{border-top:1px solid rgba(214,204,191,.12);}
 .ci-l{font-size:.6rem;letter-spacing:.32em;text-transform:uppercase;color:var(--sand);margin-bottom:.5rem;font-weight:300;}
 .ci-v{font-size:.95rem;line-height:1.7;color:rgba(242,237,230,.65);font-weight:300;}
-.map-ph{aspect-ratio:4/3;background:var(--accent);border:1px solid rgba(214,204,191,.1);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
-.map-gbg{position:absolute;inset:0;background-image:linear-gradient(rgba(214,204,191,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(214,204,191,.05) 1px,transparent 1px);background-size:36px 36px;}
-.map-pin{width:14px;height:14px;background:var(--sand);border-radius:50%;position:relative;z-index:1;animation:pinP 2.5s ease-in-out infinite;}
-@keyframes pinP{0%,100%{box-shadow:0 0 0 0 rgba(214,204,191,.4)}50%{box-shadow:0 0 0 18px rgba(214,204,191,0)}}
-.map-city{position:absolute;bottom:1.25rem;left:50%;transform:translateX(-50%);font-size:.6rem;letter-spacing:.35em;text-transform:uppercase;color:rgba(242,237,230,.22);white-space:nowrap;}
 .soc-links{display:flex;gap:.75rem;margin-top:1rem;}
 .soc-a{width:38px;height:38px;border:1px solid rgba(214,204,191,.2);display:flex;align-items:center;justify-content:center;font-size:.65rem;color:rgba(242,237,230,.45);text-decoration:none;transition:all .3s;letter-spacing:.05em;}
 .soc-a:hover{border-color:var(--sand);color:var(--sand);}
@@ -202,11 +199,10 @@ nav.scrolled:not(.dark-nav) .hamburger span{background:var(--espresso);}
 /* FOOTER */
 footer{padding:3.5rem 0 2rem;background:#08122a;border-top:1px solid rgba(214,204,191,.06);}
 .ft-logo{font-family:'Cormorant',serif;font-size:2rem;font-weight:300;letter-spacing:.2em;color:var(--oat);}
-.ft-tag{font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(242,237,230,.22);margin-top:.4rem;font-weight:300;}
 .ft-links a{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(242,237,230,.28);text-decoration:none;transition:color .3s;font-weight:300;}
 .ft-links a:hover{color:var(--sand);}
-.ft-bot{margin-top:3rem;padding-top:1.75rem;color:white !important;border-top:1px solid rgba(214,204,191,.05);display:flex;justify-content:space-between;align-items:center;}
-.ft-copy{font-size:.82rem;letter-spacing:.1em;color:rgb(245, 245, 245);font-weight:300;}
+.ft-bot{margin-top:3rem;padding-top:1.75rem;border-top:1px solid rgba(214,204,191,.05);display:flex;justify-content:space-between;align-items:center;}
+.ft-copy{font-size:.82rem;letter-spacing:.1em;color:rgb(245,245,245);font-weight:300;}
 
 /* MOBILE NAV */
 .mob-ov{display:none;position:fixed;inset:0;background:rgba(8,18,42,.97);z-index:300;flex-direction:column;align-items:center;justify-content:center;gap:2rem;}
@@ -322,7 +318,7 @@ footer{padding:3.5rem 0 2rem;background:#08122a;border-top:1px solid rgba(214,20
 
 <!-- NAV -->
 <nav id="nav" class="dark-nav">
-  <a href="#hero" class="nav-logo"> <img src="img/logo.png" width="130px" alt="hola"></a>
+  <a href="#hero" class="nav-logo"><img src="img/logo.png" width="130px" alt="CM Studio"></a>
   <ul class="nav-links">
     <li><a href="#about">Nosotros</a></li>
     <li><a href="#services">Servicios</a></li>
@@ -351,8 +347,8 @@ footer{padding:3.5rem 0 2rem;background:#08122a;border-top:1px solid rgba(214,20
   <div class="hero-content">
     <p class="hero-eyebrow">Barcelona · Desde 1975</p>
     <h1 class="hero-title">
-      <span class="hero-title-line"><span class="hero-title-inner">Mario</span></span>
-      <span class="hero-title-line"><span class="hero-title-inner">Peluqueros</span></span>
+      <span class="hero-title-line"><span class="hero-title-inner">CM</span></span>
+      <span class="hero-title-line"><span class="hero-title-inner">Studio</span></span>
     </h1>
     <div class="hero-div"></div>
     <p class="hero-sub">Peluquería y Estética en Barcelona</p>
@@ -373,11 +369,11 @@ footer{padding:3.5rem 0 2rem;background:#08122a;border-top:1px solid rgba(214,20
     <div class="m-item">Barcelona<div class="m-dot"></div></div>
     <div class="m-item">Peluquería y Estética<div class="m-dot"></div></div>
     <div class="m-item">Barcelona<div class="m-dot"></div></div>
-   <div class="m-item">Peluquería y Estética<div class="m-dot"></div></div>
+    <div class="m-item">Peluquería y Estética<div class="m-dot"></div></div>
     <div class="m-item">Barcelona<div class="m-dot"></div></div>
     <div class="m-item">Peluquería y Estética<div class="m-dot"></div></div>
     <div class="m-item">Barcelona<div class="m-dot"></div></div>
-   <div class="m-item">Peluquería y Estética<div class="m-dot"></div></div>
+    <div class="m-item">Peluquería y Estética<div class="m-dot"></div></div>
     <div class="m-item">Barcelona<div class="m-dot"></div></div>
   </div>
 </div>
@@ -407,7 +403,6 @@ footer{padding:3.5rem 0 2rem;background:#08122a;border-top:1px solid rgba(214,20
 <section id="services">
   <div class="max-w-7xl mx-auto px-6 lg:px-16">
 
-    <!-- PELUQUERÍA -->
     <div class="text-center mb-14">
       <p class="stag rv" style="justify-content:center">Nuestros Servicios</p>
       <h2 class="sh rv d1 text-center">Cada detalle,<br/><em>perfeccionado</em></h2>
@@ -424,28 +419,44 @@ footer{padding:3.5rem 0 2rem;background:#08122a;border-top:1px solid rgba(214,20
       <div class="svc-card"><div class="svc-n">06</div><h3 class="svc-name">Tratamientos Capilares</h3><p class="svc-desc">Tratamientos para cualquier tipo de cabello con productos muy reconocidos. Tu cabello en las mejores manos.</p></div>
     </div>
 
-    <!-- ESTÉTICA -->
-    <p class="section-label rv" style="text-align:center; margin-top: 5rem; margin-bottom: 2rem;">Estética en Barcelona</p>
+    <p class="section-label rv" style="text-align:center; margin-top: 5rem; margin-bottom: 1rem;">Estética en Barcelona</p>
 
+    <!-- DESTACADOS ESTÉTICA -->
+    <p class="rv" style="text-align:center;font-size:.6rem;letter-spacing:.35em;text-transform:uppercase;color:var(--topo);margin-bottom:2rem;font-weight:400;">Tratamientos estrella</p>
+    <div class="rv" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--espresso);margin-bottom:1px;">
+
+      <div class="svc-card" style="background:var(--espresso);border-top:2px solid var(--sand);">
+        <div class="svc-n" style="color:var(--sand);">★ Destacado</div>
+        <h3 class="svc-name" style="color:var(--oat);">Tratamientos Faciales</h3>
+        <p class="svc-desc" style="color:rgba(242,237,230,.55);">Tecnologías de última generación para resultados visibles. Trabajamos con la plataforma <strong style="color:var(--sand);font-weight:400;">Expert Jet</strong> y el innovador <strong style="color:var(--sand);font-weight:400;">Dermapen</strong> para regeneración celular profunda. Resultados reales, piel transformada.</p>
+      </div>
+
+      <div class="svc-card" style="background:var(--espresso);border-top:2px solid var(--sand);">
+        <div class="svc-n" style="color:var(--sand);">★ Destacado</div>
+        <h3 class="svc-name" style="color:var(--oat);">Diagnóstico de Piel</h3>
+        <p class="svc-desc" style="color:rgba(242,237,230,.55);">Análisis profesional personalizado de tu tipo de piel antes de cualquier tratamiento. Identificamos tus necesidades reales para diseñar una rutina y protocolo completamente a medida.</p>
+      </div>
+
+      <div class="svc-card" style="background:var(--espresso);border-top:2px solid var(--sand);">
+        <div class="svc-n" style="color:var(--sand);">★ Destacado</div>
+        <h3 class="svc-name" style="color:var(--oat);">Fotodepilación</h3>
+        <p class="svc-desc" style="color:rgba(242,237,230,.55);">Depilación de última generación con tecnología de luz pulsada de alto rendimiento. Resultados excepcionales, seguros y duraderos en cualquier zona del cuerpo.</p>
+      </div>
+
+    </div>
+
+    <!-- RESTO DE SERVICIOS ESTÉTICA -->
     <div class="svc-grid rv">
-      <div class="svc-card svc-card--est"><div class="svc-n svc-n--est">01</div><h3 class="svc-name">Tratamientos corporales</h3><p class="svc-desc">Pon un toque de estética a tu estilo con nuestros tratamientos corporales a medida.</p></div>
-      <div class="svc-card svc-card--est"><div class="svc-n svc-n--est">02</div><h3 class="svc-name">Drenajes linfáticos</h3><p class="svc-desc">Técnicas profesionales de drenaje para activar la circulación y reducir la retención de líquidos.</p></div>
-      <div class="svc-card svc-card--est"><div class="svc-n svc-n--est">03</div><h3 class="svc-name">Higienes faciales</h3><p class="svc-desc">Limpiezas profundas adaptadas a tu tipo de piel para un cutis luminoso y saludable.</p></div>
-      <div class="svc-card svc-card--est"><div class="svc-n svc-n--est">04</div><h3 class="svc-name">Quiromasaje</h3><p class="svc-desc">Masaje terapéutico manual para liberar tensiones musculares y recuperar el bienestar corporal.</p></div>
-      <div class="svc-card svc-card--est"><div class="svc-n svc-n--est">05</div><h3 class="svc-name">Limpiezas de espalda</h3><p class="svc-desc">Tratamiento específico para limpiar, exfoliar e hidratar la zona de la espalda en profundidad.</p></div>
-      <div class="svc-card svc-card--est"><div class="svc-n svc-n--est">06</div><h3 class="svc-name">Maquillaje</h3><p class="svc-desc">Maquillaje de todo tipo: social, nupcial, fantasía y eventos especiales con acabados impecables.</p></div>
-      <div class="svc-card svc-card--est"><div class="svc-n svc-n--est">07</div><h3 class="svc-name">Extensiones de pestañas</h3><p class="svc-desc">Volumen y definición naturales o dramáticos con técnicas de aplicación de alta precisión.</p></div>
-      <div class="svc-card svc-card--est"><div class="svc-n svc-n--est">08</div><h3 class="svc-name">Micropigmentación</h3><p class="svc-desc">Definición semipermanente de cejas, labios y ojos para un look perfecto sin esfuerzo diario.</p></div>
-      <div class="svc-card svc-card--est"><div class="svc-n svc-n--est">09</div><h3 class="svc-name">Manicura & Pedicura</h3><p class="svc-desc">Con gel, acrílico o semipermanente. Decoración de uñas incluida para expresar tu personalidad.</p></div>
-      <div class="svc-card svc-card--est"><div class="svc-n svc-n--est">10</div><h3 class="svc-name">Venta de cosméticos</h3><p class="svc-desc">Selección de productos cosméticos de todo tipo para prolongar los resultados en casa.</p></div>
-      <div class="svc-card svc-card--est"><div class="svc-n svc-n--est">11</div><h3 class="svc-name">Depilación láser de diodo</h3><p class="svc-desc">Tecnología láser de diodo para una depilación definitiva, eficaz y segura en cualquier zona del cuerpo.</p></div>
-      <div class="svc-card svc-card--est"><div class="svc-n svc-n--est">12</div><h3 class="svc-name">Depilación tibia & caliente</h3><p class="svc-desc">Material de un solo uso garantizado. Resultados duraderos con el máximo respeto por tu piel.</p></div>
+      <div class="svc-card"><div class="svc-n">01</div><h3 class="svc-name">Lifting & Tinte de Pestañas</h3><p class="svc-desc">Curvado permanente y tinte profesional para unas pestañas con efecto abierto y definido sin necesidad de máscara.</p></div>
+      <div class="svc-card"><div class="svc-n">02</div><h3 class="svc-name">Laminado de Cejas</h3><p class="svc-desc">Técnica de reestructuración del vello para unas cejas perfectamente definidas, ordenadas y con volumen natural duradero.</p></div>
+      <div class="svc-card"><div class="svc-n">03</div><h3 class="svc-name">Micropigmentación</h3><p class="svc-desc">Definición semipermanente de cejas, labios y ojos para un look impecable sin esfuerzo diario.</p></div>
+      <div class="svc-card"><div class="svc-n">04</div><h3 class="svc-name">Manicura & Pedicura</h3><p class="svc-desc">Con esmaltado semipermanente o tradicional. Cuidado completo de manos y pies con acabados impecables.</p></div>
+      <div class="svc-card"><div class="svc-n">05</div><h3 class="svc-name">Quiromasaje</h3><p class="svc-desc">Masaje terapéutico manual para liberar tensiones musculares profundas y recuperar el bienestar corporal.</p></div>
+      <div class="svc-card"><div class="svc-n">06</div><h3 class="svc-name">Depilación con Cera</h3><p class="svc-desc">Depilación tradicional con cera caliente o tibia. Material de un solo uso garantizado y máximo respeto por tu piel.</p></div>
     </div>
 
   </div>
 </section>
-
-<!-- QUOTE -->
 
 <!-- PREMIOS -->
 <section id="premios" style="padding:7rem 0;background:var(--carbon);">
@@ -454,84 +465,71 @@ footer{padding:3.5rem 0 2rem;background:#08122a;border-top:1px solid rgba(214,20
       <p class="stag rv">Reconocimientos</p>
       <h2 class="sh rv d1 text-white">Una trayectoria<br/>de <em>excelencia</em></h2>
     </div>
-   
     <div class="rv" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(214,204,191,.08);">
-
       <div class="aw-card" style="background:var(--carbon);padding:2.25rem 2rem;position:relative;overflow:hidden;transition:background .35s;">
         <p style="font-family:'Cormorant',serif;font-size:.8rem;font-weight:300;color:rgba(214,204,191,.35);letter-spacing:.18em;margin-bottom:1.25rem;">01</p>
         <div style="width:28px;height:1px;background:rgba(214,204,191,.18);margin-bottom:1rem;"></div>
         <p style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:300;line-height:1.35;color:var(--oat);">Campeón Iberoamericano de Peluquería</p>
       </div>
-
       <div class="aw-card" style="background:var(--carbon);padding:2.25rem 2rem;position:relative;overflow:hidden;transition:background .35s;">
         <p style="font-family:'Cormorant',serif;font-size:.8rem;font-weight:300;color:rgba(214,204,191,.35);letter-spacing:.18em;margin-bottom:1.25rem;">02</p>
         <div style="width:28px;height:1px;background:rgba(214,204,191,.18);margin-bottom:1rem;"></div>
         <p style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:300;line-height:1.35;color:var(--oat);">Rosa de Oro de París</p>
       </div>
-
       <div class="aw-card" style="background:var(--carbon);padding:2.25rem 2rem;position:relative;overflow:hidden;transition:background .35s;">
         <p style="font-family:'Cormorant',serif;font-size:.8rem;font-weight:300;color:rgba(214,204,191,.35);letter-spacing:.18em;margin-bottom:1.25rem;">03</p>
         <div style="width:28px;height:1px;background:rgba(214,204,191,.18);margin-bottom:1rem;"></div>
         <p style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:300;line-height:1.35;color:var(--oat);">Quijote Internacional de Oro</p>
       </div>
-
       <div class="aw-card" style="background:var(--carbon);padding:2.25rem 2rem;position:relative;overflow:hidden;transition:background .35s;">
         <p style="font-family:'Cormorant',serif;font-size:.8rem;font-weight:300;color:rgba(214,204,191,.35);letter-spacing:.18em;margin-bottom:1.25rem;">04</p>
         <div style="width:28px;height:1px;background:rgba(214,204,191,.18);margin-bottom:1rem;"></div>
         <p style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:300;line-height:1.35;color:var(--oat);">Título A.N.A.I — Academia Nacional de Peluqueros de Italia</p>
       </div>
-
       <div class="aw-card" style="background:var(--carbon);padding:2.25rem 2rem;position:relative;overflow:hidden;transition:background .35s;">
         <p style="font-family:'Cormorant',serif;font-size:.8rem;font-weight:300;color:rgba(214,204,191,.35);letter-spacing:.18em;margin-bottom:1.25rem;">05</p>
         <div style="width:28px;height:1px;background:rgba(214,204,191,.18);margin-bottom:1rem;"></div>
         <p style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:300;line-height:1.35;color:var(--oat);">Premio Gaudí 2024 a la Imagen y Trayectoria</p>
       </div>
-
       <div class="aw-card" style="background:var(--carbon);padding:2.25rem 2rem;position:relative;overflow:hidden;transition:background .35s;">
         <p style="font-family:'Cormorant',serif;font-size:.8rem;font-weight:300;color:rgba(214,204,191,.35);letter-spacing:.18em;margin-bottom:1.25rem;">06</p>
         <div style="width:28px;height:1px;background:rgba(214,204,191,.18);margin-bottom:1rem;"></div>
         <p style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:300;line-height:1.35;color:var(--oat);">Medalla de Oro «Dama de Elche»</p>
       </div>
-
       <div class="aw-card" style="background:var(--carbon);padding:2.25rem 2rem;position:relative;overflow:hidden;transition:background .35s;">
         <p style="font-family:'Cormorant',serif;font-size:.8rem;font-weight:300;color:rgba(214,204,191,.35);letter-spacing:.18em;margin-bottom:1.25rem;">07</p>
         <div style="width:28px;height:1px;background:rgba(214,204,191,.18);margin-bottom:1rem;"></div>
         <p style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:300;line-height:1.35;color:var(--oat);">Medalla de Oro de Naz Masaniello — Nápoles</p>
       </div>
-
       <div class="aw-card" style="background:var(--carbon);padding:2.25rem 2rem;position:relative;overflow:hidden;transition:background .35s;">
         <p style="font-family:'Cormorant',serif;font-size:.8rem;font-weight:300;color:rgba(214,204,191,.35);letter-spacing:.18em;margin-bottom:1.25rem;">08</p>
         <div style="width:28px;height:1px;background:rgba(214,204,191,.18);margin-bottom:1rem;"></div>
         <p style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:300;line-height:1.35;color:var(--oat);">Campeón de Barcelona</p>
       </div>
-
       <div class="aw-card" style="background:var(--carbon);padding:2.25rem 2rem;position:relative;overflow:hidden;transition:background .35s;">
         <p style="font-family:'Cormorant',serif;font-size:.8rem;font-weight:300;color:rgba(214,204,191,.35);letter-spacing:.18em;margin-bottom:1.25rem;">09</p>
         <div style="width:28px;height:1px;background:rgba(214,204,191,.18);margin-bottom:1rem;"></div>
         <p style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:300;line-height:1.35;color:var(--oat);">Título C.A.R.A.M — Cooperativa de Artesanos Italianos</p>
       </div>
-
       <div class="aw-card" style="background:var(--carbon);padding:2.25rem 2rem;position:relative;overflow:hidden;transition:background .35s;">
         <p style="font-family:'Cormorant',serif;font-size:.8rem;font-weight:300;color:rgba(214,204,191,.35);letter-spacing:.18em;margin-bottom:1.25rem;">10</p>
         <div style="width:28px;height:1px;background:rgba(214,204,191,.18);margin-bottom:1rem;"></div>
         <p style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:300;line-height:1.35;color:var(--oat);">Campeón de Cataluña</p>
       </div>
-
       <div class="aw-card" style="background:var(--carbon);padding:2.25rem 2rem;position:relative;overflow:hidden;transition:background .35s;">
         <p style="font-family:'Cormorant',serif;font-size:.8rem;font-weight:300;color:rgba(214,204,191,.35);letter-spacing:.18em;margin-bottom:1.25rem;">11</p>
         <div style="width:28px;height:1px;background:rgba(214,204,191,.18);margin-bottom:1rem;"></div>
         <p style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:300;line-height:1.35;color:var(--oat);">Insignia de Oro del Club Artístico de Barcelona — entregada por el presidente Lladó</p>
       </div>
-
       <div class="aw-card" style="background:var(--carbon);padding:2.25rem 2rem;position:relative;overflow:hidden;transition:background .35s;">
         <p style="font-family:'Cormorant',serif;font-size:.8rem;font-weight:300;color:rgba(214,204,191,.35);letter-spacing:.18em;margin-bottom:1.25rem;">12</p>
         <div style="width:28px;height:1px;background:rgba(214,204,191,.18);margin-bottom:1rem;"></div>
         <p style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:300;line-height:1.35;color:var(--oat);">Premio del Comité Organisateur del Mondial Coiffure Beauté de París, Délégation Internationale</p>
       </div>
-
     </div>
   </div>
 </section>
+
 <!-- EQUIPO -->
 <section id="equipo">
   <div class="max-w-7xl mx-auto px-6 lg:px-16">
@@ -541,18 +539,11 @@ footer{padding:3.5rem 0 2rem;background:#08122a;border-top:1px solid rgba(214,20
     </div>
     <div class="team-grid rv">
       <div class="team-card"><div class="team-img" style="background-image:url('img/mario.jpg')"></div><div class="team-over"></div><div class="team-info"><h3 class="team-nm">Francisco Mario Gómez</h3><p class="team-rl">Estilista y Jefe de Equipos</p></div></div>
-
-<div class="team-card"><div class="team-img" style="background-image:url('img/carmen.jpg')"></div><div class="team-over"></div><div class="team-info"><h3 class="team-nm">Carmen Buizá</h3><p class="team-rl">Manager de la Empresa</p></div></div>
-
-<div class="team-card"><div class="team-img" style="background-image:url('img/maria.jpg')"></div><div class="team-over"></div><div class="team-info"><h3 class="team-nm">María Huertas</h3><p class="team-rl">Estilista y Consejera del Salón</p></div></div>
-
-<div class="team-card"><div class="team-img" style="background-image:url('img/valentin.jpg')"></div><div class="team-over"></div><div class="team-info"><h3 class="team-nm">Valentín Gómez</h3><p class="team-rl">Estilista Jefe</p></div></div>
-
-<div class="team-card"><div class="team-img" style="background-image:url('img/aida.jpg')"></div><div class="team-over"></div><div class="team-info"><h3 class="team-nm">Aida Gómez</h3><p class="team-rl">Jefe del Centro de Estética</p></div></div>
-
-<div class="team-card"><div class="team-img" style="background-image:url('img/sandra.jpg')"></div><div class="team-over"></div><div class="team-info"><h3 class="team-nm">Sandra Roch</h3><p class="team-rl">Técnica en Color y Consejera en Tratamientos</p></div></div>
-
-<div class="team-card"><div class="team-img" style="background-image:url('img/maribel.jpg')"></div><div class="team-over"></div><div class="team-info"><h3 class="team-nm">Maribel Baños</h3><p class="team-rl">Estilista y Consejera en Cambios de Imagen</p></div></div>
+      <div class="team-card"><div class="team-img" style="background-image:url('img/carmen.jpg')"></div><div class="team-over"></div><div class="team-info"><h3 class="team-nm">Carmen Buizá</h3><p class="team-rl">Manager de la Empresa</p></div></div>
+      <div class="team-card"><div class="team-img" style="background-image:url('img/maria.jpg')"></div><div class="team-over"></div><div class="team-info"><h3 class="team-nm">María Huertas</h3><p class="team-rl">Estilista y Consejera del Salón</p></div></div>
+      <div class="team-card"><div class="team-img" style="background-image:url('img/aida.jpg')"></div><div class="team-over"></div><div class="team-info"><h3 class="team-nm">Aida Gómez</h3><p class="team-rl">Jefe del Centro de Estética</p></div></div>
+      <div class="team-card"><div class="team-img" style="background-image:url('img/sandra.jpg')"></div><div class="team-over"></div><div class="team-info"><h3 class="team-nm">Sandra Roch</h3><p class="team-rl">Técnica en Color y Consejera en Tratamientos</p></div></div>
+      <div class="team-card"><div class="team-img" style="background-image:url('img/maribel.jpg')"></div><div class="team-over"></div><div class="team-info"><h3 class="team-nm">Maribel Baños</h3><p class="team-rl">Estilista y Consejera en Cambios de Imagen</p></div></div>
     </div>
   </div>
 </section>
@@ -586,8 +577,7 @@ footer{padding:3.5rem 0 2rem;background:#08122a;border-top:1px solid rgba(214,20
           <div class="fg"><label class="flbl">Teléfono / Email</label><input type="text" class="finp" placeholder="Contacto"/></div>
         </div>
         <div class="fl2">
-          <div class="fg"><label class="flbl">Servicio</label><select class="finp"><option value="">Seleccionar servicio</option><option>Cortes</option><option>Peinados</option><option>Desrizados & Moldeadores</option><option>Color</option><option>Recogidos</option><option>Tratamientos Capilares</option></select></div>
-          <div class="fg"><label class="flbl">Estilista</label><select class="finp"><option value="">Sin preferencia</option><option>Francisco Mario Gómez</option><option>Carmen Buizá</option><option>María Huertas</option><option>Valentín Gómez</option><option>Aida Gómez</option><option>Sandra Roch</option><option>Maribel Baños</option></select></div>
+<div class="fg"><label class="flbl">Servicio</label><select class="finp"><option value="">Seleccionar servicio</option><option>Peluquería</option><option>Estética</option></select></div>          <div class="fg"><label class="flbl">Estilista</label><select class="finp"><option value="">Sin preferencia</option><option>Francisco Mario Gómez</option><option>Carmen Buizá</option><option>María Huertas</option><option>Aida Gómez</option><option>Sandra Roch</option><option>Maribel Baños</option></select></div>
         </div>
         <div class="fl2">
           <div class="fg"><label class="flbl">Fecha</label><input type="date" class="finp"/></div>
@@ -620,37 +610,30 @@ footer{padding:3.5rem 0 2rem;background:#08122a;border-top:1px solid rgba(214,20
       <div>
         <p class="stag rv">Encuéntranos</p>
         <h2 class="sh rv d1" style="margin-bottom:2.5rem">Ven a<br/><em>visitarnos</em></h2>
-
         <div class="ci rv">
           <p class="ci-l">Sede Principal</p>
           <p class="ci-v">Calle San Antonio María Claret, 180<br/><span style="font-size:.8rem;opacity:.6">Telf: 934 351 618</span></p>
         </div>
-
         <div class="ci rv d1">
           <p class="ci-l">Centro de Estética</p>
           <p class="ci-v">Horas a convenir<br/><span style="font-size:.8rem;opacity:.6">Telf: 934 351 618</span></p>
         </div>
-
-        <div class="ci rv d2">
-          <p class="ci-l">Salón Berruguete</p>
-          <p class="ci-v">Calle Berruguete, 108<br/><span style="font-size:.8rem;opacity:.6">Telf: 934 286 121</span></p>
-        </div>
-
-        <div class="ci rv d3" style="border-bottom:none">
-          <p class="ci-l">Salón Vallespir</p>
-          <p class="ci-v">Calle Vallespir, 94</p>
-        </div>
-
+       
         <div class="ci rv" style="border-top:none;padding-top:.5rem;border-bottom:none">
           <p class="ci-l">Redes Sociales</p>
           <div class="soc-links">
-            <a href="#" class="soc-a">Ig</a>
-            <a href="#" class="soc-a">Fb</a>
-            <a href="#" class="soc-a">Tk</a>
+            <a href="#" class="soc-a" title="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" class="soc-a" title="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="soc-a" title="TikTok">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+            </a>
           </div>
         </div>
       </div>
-
       <div class="rv d1">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.4!2d2.1734!3d41.4089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f4b0b0b0b0%3A0x0!2sCalle+San+Antonio+Mar%C3%ADa+Claret+180%2C+Barcelona!5e0!3m2!1ses!2ses!4v1"
@@ -662,7 +645,6 @@ footer{padding:3.5rem 0 2rem;background:#08122a;border-top:1px solid rgba(214,20
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
-
     </div>
   </div>
 </section>
@@ -672,63 +654,147 @@ footer{padding:3.5rem 0 2rem;background:#08122a;border-top:1px solid rgba(214,20
   <div class="max-w-7xl mx-auto px-6 lg:px-16">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
       <div class="md:col-span-2">
-        <div class="ft-logo"><img src="img/logo.png" width="180px" alt="hola"></div>
-        
+        <div class="ft-logo"><img src="img/logo.png" width="180px" alt="CM Studio"></div>
         <p style="font-size:.82rem;line-height:1.75;color:rgba(242,237,230,.26);margin-top:1.5rem;max-width:300px;font-weight:300">Un espacio donde la tradición barbera se encuentra con el estilo contemporáneo. Tu imagen, nuestra pasión.</p>
       </div>
-      <div><p style="font-size:.6rem;letter-spacing:.32em;text-transform:uppercase;color:var(--sand);margin-bottom:1.25rem;font-weight:300">Navegación</p><div class="ft-links flex flex-col gap-3"><a href="#about">Nosotros</a><a href="#services">Servicios</a><a href="#equipo">Equipo</a><a href="#galeria">Galería</a><a href="#reserva">Reservar Cita</a></div></div>
-      <div><p style="font-size:.6rem;letter-spacing:.32em;text-transform:uppercase;color:var(--sand);margin-bottom:1.25rem;font-weight:300">Contacto</p><div style="display:flex;flex-direction:column;gap:.75rem"><p style="font-size:.75rem;color:rgba(242,237,230,.25);font-weight:300">+34 91 234 56 78</p><p style="font-size:.75rem;color:rgba(242,237,230,.25);font-weight:300">hola@mariopeluqueros.es</p><p style="font-size:.75rem;color:rgba(242,237,230,.25);font-weight:300;line-height:1.65">Calle Gran Vía, 45<br/>28013 Barcelona</p></div></div>
+      <div>
+        <p style="font-size:.6rem;letter-spacing:.32em;text-transform:uppercase;color:var(--sand);margin-bottom:1.25rem;font-weight:300">Navegación</p>
+        <div class="ft-links flex flex-col gap-3">
+          <a href="#about">Nosotros</a>
+          <a href="#services">Servicios</a>
+          <a href="#equipo">Equipo</a>
+          <a href="#galeria">Galería</a>
+          <a href="#reserva">Reservar Cita</a>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:.6rem;letter-spacing:.32em;text-transform:uppercase;color:var(--sand);margin-bottom:1.25rem;font-weight:300">Contacto</p>
+        <div style="display:flex;flex-direction:column;gap:.75rem">
+          <p style="font-size:.75rem;color:rgba(242,237,230,.25);font-weight:300">934 351 618 / 934 286 121</p>
+          <p style="font-size:.75rem;color:rgba(242,237,230,.25);font-weight:300">hola@cmstudio.es</p>
+          <p style="font-size:.75rem;color:rgba(242,237,230,.25);font-weight:300;line-height:1.65">C/ San Antonio María Claret, 180<br/>C/ Berruguete, 108 · C/ Vallespir, 94<br/>Barcelona</p>
+        </div>
+      </div>
     </div>
-<div class="ft-bot" style="flex-direction:column;gap:1rem;align-items:center;text-align:center;">
-  <div style="display:flex;gap:2rem;">
-    <a href="politica-privacidad.html" style="font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(242,237,230,.22);text-decoration:none;font-weight:300;transition:color .3s;" onmouseover="this.style.color='var(--sand)'" onmouseout="this.style.color='rgba(242,237,230,.22)'">Política de Privacidad</a>
-    <a href="politica-cookies.html" style="font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(242,237,230,.22);text-decoration:none;font-weight:300;transition:color .3s;" onmouseover="this.style.color='var(--sand)'" onmouseout="this.style.color='rgba(242,237,230,.22)'">Política de Cookies</a>
+    <div class="ft-bot" style="flex-direction:column;gap:1rem;align-items:center;text-align:center;">
+      <div style="display:flex;gap:2rem;">
+        <a href="politica-privacidad.html" style="font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(242,237,230,.22);text-decoration:none;font-weight:300;transition:color .3s;" onmouseover="this.style.color='var(--sand)'" onmouseout="this.style.color='rgba(242,237,230,.22)'">Política de Privacidad</a>
+        <a href="politica-cookies.html" style="font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(242,237,230,.22);text-decoration:none;font-weight:300;transition:color .3s;" onmouseover="this.style.color='var(--sand)'" onmouseout="this.style.color='rgba(242,237,230,.22)'">Política de Cookies</a>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;width:100%;">
+        <p class="ft-copy">© 2026 Spreadit Marketing. Todos los derechos reservados.</p>
+        <div class="soc-links">
+            <a href="#" class="soc-a" title="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" class="soc-a" title="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" class="soc-a" title="TikTok"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg></a>
+          </div>
+      </div>
+    </div>
   </div>
-  <div style="display:flex;justify-content:space-between;align-items:center;width:100%;">
-    <p class="ft-copy">© 2026 Spreadit Marketing. Todos los derechos reservados.</p>
-    <div class="soc-links"><a href="#" class="soc-a">Ig</a><a href="#" class="soc-a">Fb</a><a href="#" class="soc-a">Tk</a></div>
-  </div>
-</div>  </div>
 </footer>
 
 <script>
-  const cur=document.getElementById('cur'),curR=document.getElementById('cur-r');
-  let mx=0,my=0,rx=0,ry=0;
-  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
-  (function loop(){rx+=(mx-rx)*.11;ry+=(my-ry)*.11;curR.style.left=rx+'px';curR.style.top=ry+'px';requestAnimationFrame(loop);})();
-  document.querySelectorAll('a,button,.svc-card,.team-card,.gi,.test-card').forEach(el=>{
-    el.addEventListener('mouseenter',()=>{cur.style.width='18px';cur.style.height='18px';curR.style.width='56px';curR.style.height='56px';});
-    el.addEventListener('mouseleave',()=>{cur.style.width='8px';cur.style.height='8px';curR.style.width='36px';curR.style.height='36px';});
+  const cur = document.getElementById('cur');
+  const curR = document.getElementById('cur-r');
+  const nav = document.getElementById('nav');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cur.style.left = mx + 'px'; cur.style.top = my + 'px';
   });
 
-  const nav=document.getElementById('nav');
-  window.addEventListener('scroll',()=>{
-    const s=window.scrollY;
-    if(s>60)nav.classList.add('scrolled');else nav.classList.remove('scrolled');
-    const hh=document.getElementById('hero').offsetHeight;
-    
+  (function loop() {
+    rx += (mx - rx) * .11; ry += (my - ry) * .11;
+    curR.style.left = rx + 'px'; curR.style.top = ry + 'px';
+    requestAnimationFrame(loop);
+  })();
+
+  document.querySelectorAll('a,button,.svc-card,.team-card,.gi,.test-card').forEach(el => {
+    el.addEventListener('mouseenter', () => { cur.style.width = '18px'; cur.style.height = '18px'; curR.style.width = '56px'; curR.style.height = '56px'; });
+    el.addEventListener('mouseleave', () => { cur.style.width = '8px'; cur.style.height = '8px'; curR.style.width = '36px'; curR.style.height = '36px'; });
   });
 
-  const rvEls=document.querySelectorAll('.rv');
-  const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');ro.unobserve(e.target);}});},{threshold:.1});
-  rvEls.forEach(el=>ro.observe(el));
+  // — ÚNICO listener de scroll — nav + hero-zone + parallax
+  const heroEl = document.getElementById('hero');
+  const hC = document.querySelector('.hero-content');
 
-  function countUp(el,target,suffix){
-    let s=0;const dur=1800;
-    const tick=ts=>{if(!s)s=ts;const p=Math.min((ts-s)/dur,1);const v=Math.floor((1-Math.pow(1-p,3))*target);
-      el.textContent=(suffix==='K+'?v+'K+':v+suffix);if(p<1)requestAnimationFrame(tick);};
+  // Secciones con fondo oscuro
+  const darkSections = ['hero','about','premios','galeria','contacto'];
+
+  function updateCursorColor() {
+    // Obtener el elemento bajo el cursor actual
+    const el = document.elementFromPoint(mx, my);
+    if (!el) return;
+    // Subir por el DOM hasta encontrar una sección
+    let node = el;
+    let isDark = false;
+    while (node && node !== document.body) {
+      const id = node.id;
+      if (id && darkSections.includes(id)) { isDark = true; break; }
+      // También detectar footer y secciones con fondo oscuro por variable CSS
+      const bg = window.getComputedStyle(node).backgroundColor;
+      // carbon/espresso = rgb(15,31,61) o #08122a
+      if (bg === 'rgb(15, 31, 61)' || bg === 'rgb(8, 18, 42)') { isDark = true; break; }
+      node = node.parentElement;
+    }
+    if (isDark) document.body.classList.add('cur-light');
+    else document.body.classList.remove('cur-light');
+  }
+
+  document.addEventListener('mousemove', updateCursorColor);
+
+  function onScroll() {
+    const s = window.scrollY;
+    const hh = heroEl.offsetHeight;
+
+    // Nav scrolled
+    if (s > 60) nav.classList.add('scrolled'); else nav.classList.remove('scrolled');
+
+    // Parallax hero content
+    if (s < hh) {
+      hC.style.transform = `translateY(${s * .25}px)`;
+      hC.style.opacity = 1 - s / (hh * .75);
+    }
+  }
+
+  window.addEventListener('scroll', onScroll);
+  onScroll(); // ejecutar al cargar para estado inicial correcto
+
+  // Reveal on scroll
+  const rvEls = document.querySelectorAll('.rv');
+  const ro = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); ro.unobserve(e.target); } });
+  }, { threshold: .1 });
+  rvEls.forEach(el => ro.observe(el));
+
+  // Count up
+  function countUp(el, target, suffix) {
+    let s = 0; const dur = 1800;
+    const tick = ts => {
+      if (!s) s = ts;
+      const p = Math.min((ts - s) / dur, 1);
+      const v = Math.floor((1 - Math.pow(1 - p, 3)) * target);
+      el.textContent = (suffix === 'K+' ? v + 'K+' : v + suffix);
+      if (p < 1) requestAnimationFrame(tick);
+    };
     requestAnimationFrame(tick);
   }
-  const cntO=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){countUp(e.target,parseInt(e.target.dataset.target),e.target.dataset.suffix);cntO.unobserve(e.target);}});},{threshold:.5});
-  document.querySelectorAll('[data-target]').forEach(el=>cntO.observe(el));
+  const cntO = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { countUp(e.target, parseInt(e.target.dataset.target), e.target.dataset.suffix); cntO.unobserve(e.target); } });
+  }, { threshold: .5 });
+  document.querySelectorAll('[data-target]').forEach(el => cntO.observe(el));
 
-  const hC=document.querySelector('.hero-content');
-  window.addEventListener('scroll',()=>{const s=window.pageYOffset,h=window.innerHeight;if(s<h){hC.style.transform=`translateY(${s*.25}px)`;hC.style.opacity=1-s/(h*.75);}});
-
-  function openMob(){document.getElementById('mobNav').classList.add('open');}
-  function closeMob(){document.getElementById('mobNav').classList.remove('open');}
-  function handleBook(btn){btn.textContent='✓ Reserva Enviada — Te Contactaremos Pronto';btn.style.background='#3a5c34';btn.style.color='#b8d4b2';btn.disabled=true;setTimeout(()=>{btn.textContent='Confirmar Reserva';btn.style.background='';btn.style.color='';btn.disabled=false;},5000);}
+  function openMob() { document.getElementById('mobNav').classList.add('open'); }
+  function closeMob() { document.getElementById('mobNav').classList.remove('open'); }
+  function handleBook(btn) {
+    btn.textContent = '✓ Reserva Enviada — Te Contactaremos Pronto';
+    btn.style.background = '#3a5c34'; btn.style.color = '#b8d4b2'; btn.disabled = true;
+    setTimeout(() => { btn.textContent = 'Confirmar Reserva'; btn.style.background = ''; btn.style.color = ''; btn.disabled = false; }, 5000);
+  }
 </script>
+
+<!-- COOKIE BANNER -->
 <div id="ck-banner" role="region" aria-label="Aviso de cookies">
   <div class="ck-inner">
     <div class="ck-text">
@@ -742,14 +808,13 @@ footer{padding:3.5rem 0 2rem;background:#08122a;border-top:1px solid rgba(214,20
     </div>
   </div>
 </div>
- 
-<!-- Modal personalización -->
+
+<!-- Modal cookies -->
 <div id="ck-modal" role="dialog" aria-modal="true" aria-labelledby="ck-modal-h">
   <div class="ck-modal-box">
     <button class="ck-modal-close" onclick="ckCloseModal()" aria-label="Cerrar">✕</button>
     <h2 class="ck-modal-title" id="ck-modal-h">Preferencias de cookies</h2>
     <p class="ck-modal-sub">Selecciona qué tipos de cookies permites. Puedes cambiar tus preferencias en cualquier momento desde nuestra política de cookies.</p>
- 
     <div class="ck-toggle-row">
       <div class="ck-toggle-header">
         <span class="ck-toggle-name">Necesarias <span class="ck-badge">Siempre activas</span></span>
@@ -778,65 +843,59 @@ footer{padding:3.5rem 0 2rem;background:#08122a;border-top:1px solid rgba(214,20
       </div>
       <p class="ck-toggle-desc">Recuerdan tus ajustes (idioma, región, etc.) para ofrecerte una experiencia personalizada.</p>
     </div>
- 
     <div class="ck-modal-actions">
       <button class="ck-acc-all" onclick="ckAcceptAll()">Aceptar todas</button>
       <button class="ck-save" onclick="ckSavePrefs()">Guardar preferencias</button>
     </div>
   </div>
 </div>
+
 <script>
-  (function(){
-    // Mostrar banner si no hay consentimiento guardado
-    function ckInit(){
-      if(!localStorage.getItem('ck_consent')){
-        setTimeout(()=>document.getElementById('ck-banner').classList.add('show'),800);
+  (function () {
+    function ckInit() {
+      if (!localStorage.getItem('ck_consent')) {
+        setTimeout(() => document.getElementById('ck-banner').classList.add('show'), 800);
       }
     }
- 
-    function ckHideBanner(){
-      const b=document.getElementById('ck-banner');
-      b.style.transform='translateY(100%)';
-      setTimeout(()=>b.classList.remove('show'),550);
+    function ckHideBanner() {
+      const b = document.getElementById('ck-banner');
+      b.style.transform = 'translateY(100%)';
+      setTimeout(() => b.classList.remove('show'), 550);
     }
- 
-    window.ckAcceptAll=function(){
-      localStorage.setItem('ck_consent',JSON.stringify({necessary:true,analytics:true,marketing:true,prefs:true,ts:Date.now()}));
-      ckHideBanner();ckCloseModal();
+    window.ckAcceptAll = function () {
+      localStorage.setItem('ck_consent', JSON.stringify({ necessary: true, analytics: true, marketing: true, prefs: true, ts: Date.now() }));
+      ckHideBanner(); ckCloseModal();
     };
-    window.ckReject=function(){
-      localStorage.setItem('ck_consent',JSON.stringify({necessary:true,analytics:false,marketing:false,prefs:false,ts:Date.now()}));
+    window.ckReject = function () {
+      localStorage.setItem('ck_consent', JSON.stringify({ necessary: true, analytics: false, marketing: false, prefs: false, ts: Date.now() }));
       ckHideBanner();
     };
-    window.ckSavePrefs=function(){
-      localStorage.setItem('ck_consent',JSON.stringify({
-        necessary:true,
-        analytics:document.getElementById('ck-analytics').checked,
-        marketing:document.getElementById('ck-marketing').checked,
-        prefs:document.getElementById('ck-prefs').checked,
-        ts:Date.now()
+    window.ckSavePrefs = function () {
+      localStorage.setItem('ck_consent', JSON.stringify({
+        necessary: true,
+        analytics: document.getElementById('ck-analytics').checked,
+        marketing: document.getElementById('ck-marketing').checked,
+        prefs: document.getElementById('ck-prefs').checked,
+        ts: Date.now()
       }));
-      ckHideBanner();ckCloseModal();
+      ckHideBanner(); ckCloseModal();
     };
-    window.ckOpenModal=function(){
-      // Restaurar toggles guardados
-      const s=localStorage.getItem('ck_consent');
-      if(s){const p=JSON.parse(s);
-        document.getElementById('ck-analytics').checked=!!p.analytics;
-        document.getElementById('ck-marketing').checked=!!p.marketing;
-        document.getElementById('ck-prefs').checked=!!p.prefs;
+    window.ckOpenModal = function () {
+      const s = localStorage.getItem('ck_consent');
+      if (s) {
+        const p = JSON.parse(s);
+        document.getElementById('ck-analytics').checked = !!p.analytics;
+        document.getElementById('ck-marketing').checked = !!p.marketing;
+        document.getElementById('ck-prefs').checked = !!p.prefs;
       }
       document.getElementById('ck-modal').classList.add('show');
     };
-    window.ckCloseModal=function(){
+    window.ckCloseModal = function () {
       document.getElementById('ck-modal').classList.remove('show');
     };
- 
-    // Cerrar modal clickando fuera
-    document.getElementById('ck-modal').addEventListener('click',function(e){
-      if(e.target===this)ckCloseModal();
+    document.getElementById('ck-modal').addEventListener('click', function (e) {
+      if (e.target === this) ckCloseModal();
     });
- 
     ckInit();
   })();
 </script>
